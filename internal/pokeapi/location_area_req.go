@@ -88,6 +88,9 @@ func (c *Client) GetLocationArea(locationAreaName string) (LocationArea, error) 
 	defer res.Body.Close()
 
 	if res.StatusCode > 399 {
+		if res.StatusCode == 404 {
+			return LocationArea{}, fmt.Errorf("invalid location: %s", locationAreaName)
+		}
 		return LocationArea{}, fmt.Errorf("bad status code: %v", res.StatusCode)
 	}
 

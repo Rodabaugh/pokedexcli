@@ -33,10 +33,5 @@ func commandInspect(cfg *config, args ...string) error {
 		fmt.Printf("- %s\n", frm.Name)
 	}
 
-	fmt.Println("---Moves---")
-	for _, move := range pokemon.Moves {
-		fmt.Printf("- %s\n", move.Move.Name)
-	}
-
 	return nil
 }

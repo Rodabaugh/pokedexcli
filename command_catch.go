@@ -20,13 +20,13 @@ func commandCatch(cfg *config, args ...string) error {
 	}
 
 	fmt.Printf("Throwing a Pokeball at %s", pokemonName)
-	time.Sleep(time.Second / 2)
+	time.Sleep(time.Second / 4)
 	fmt.Print(".")
-	time.Sleep(time.Second / 2)
+	time.Sleep(time.Second / 4)
 	fmt.Print(".")
-	time.Sleep(time.Second / 2)
+	time.Sleep(time.Second / 4)
 	fmt.Print(".")
-	time.Sleep(time.Second / 2)
+	time.Sleep(time.Second / 4)
 	fmt.Print("\n")
 
 	const threshold = 50
