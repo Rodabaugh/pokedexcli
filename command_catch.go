@@ -4,6 +4,7 @@ import (
 	"errors"
 	"fmt"
 	"math/rand"
+	"time"
 )
 
 func commandCatch(cfg *config, args ...string) error {
@@ -17,6 +18,16 @@ func commandCatch(cfg *config, args ...string) error {
 	if err != nil {
 		return err
 	}
+
+	fmt.Printf("Throwing a Pokeball at %s", pokemonName)
+	time.Sleep(time.Second / 2)
+	fmt.Print(".")
+	time.Sleep(time.Second / 2)
+	fmt.Print(".")
+	time.Sleep(time.Second / 2)
+	fmt.Print(".")
+	time.Sleep(time.Second / 2)
+	fmt.Print("\n")
 
 	const threshold = 50
 	randNum := rand.Intn(pokemon.BaseExperience)
